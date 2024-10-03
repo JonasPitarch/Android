@@ -1,35 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".FirstFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
-        <Button
-            android:id="@+id/button_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/Vidamasp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+    <Button
+        android:id="@+id/Vidamenp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/vidapas1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/vidap1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_favorite_24"
+        app:layout_constraintBottom_toTopOf="@+id/vidapas1"
+        app:layout_constraintEnd_toEndOf="@+id/Vidamasp1"
+        app:layout_constraintStart_toStartOf="@+id/Vidamasp1"
+        app:layout_constraintTop_toBottomOf="@+id/Vidamasp1"
+        app:tint="@android:color/holo_red_dark" />
+
+    <ImageButton
+        android:id="@+id/menvidap1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_heart_broken_24"
+        app:layout_constraintBottom_toTopOf="@+id/vidapas1"
+        app:layout_constraintEnd_toEndOf="@+id/Vidamenp1"
+        app:layout_constraintStart_toStartOf="@+id/Vidamenp1"
+        app:layout_constraintTop_toBottomOf="@+id/Vidamenp1"
+        app:tint="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/CounterTextp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/vidapas1"
+        app:layout_constraintEnd_toStartOf="@+id/menvidap1"
+        app:layout_constraintStart_toEndOf="@+id/vidap1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Textop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Menosvidp2"
+        app:layout_constraintStart_toEndOf="@+id/Masvidp2"
+        app:layout_constraintTop_toBottomOf="@+id/vidapas2"
+        app:layout_constraintVertical_bias="0.51"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/vidapas2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintEnd_toEndOf="@+id/vidapas1"
+        app:layout_constraintStart_toStartOf="@+id/vidapas1"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/Vidmasp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vidapas2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Vidmenp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vidapas2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/Masvidp2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_favorite_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Vidmasp2"
+        app:layout_constraintStart_toStartOf="@+id/Vidmasp2"
+        app:layout_constraintTop_toBottomOf="@+id/Vidmasp2" />
+
+    <ImageButton
+        android:id="@+id/Menosvidp2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_heart_broken_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Vidmenp2"
+        app:layout_constraintStart_toStartOf="@+id/Vidmenp2"
+        app:layout_constraintTop_toBottomOf="@+id/Vidmenp2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
